@@ -1,0 +1,19 @@
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>body</th>
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each controller itemController="post"}}
+      {{view Posts.PostShowView}}
+    {{/each}}
+    {{#if isNewVisible}}
+      {{view Posts.PostNewView}}
+    {{/if}}
+  </tbody>
+</table>
+
+<button class='btn' {{action new}}>New</button>

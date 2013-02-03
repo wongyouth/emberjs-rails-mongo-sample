@@ -1,0 +1,10 @@
+<tr>
+  <td>{{view Em.TextField valueBinding='title'}}</td>
+  <td>{{view Em.TextField valueBinding='body'}}</td>
+  <td>
+    <button type="submit" class='btn' {{action save on 'submit'}}>
+      {{#if id}} Update {{else}} Create {{/if}}
+    </button>
+  </td>
+  <td><button class='btn' {{action 'cancel'}}>Cancel</button></td>
+</tr>

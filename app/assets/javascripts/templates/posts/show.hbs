@@ -1,0 +1,10 @@
+{{#if isEditing}}
+  {{view Posts.PostEditView}}
+{{else}}
+  <tr>
+    <td>{{title}}</td>
+    <td>{{body}}</td>
+    <td><button {{action 'edit'}} class='btn'>Edit</button></td>
+    <td><button {{action 'delete'}} class='btn btn-danger'>Destroy</button></td>
+  </tr>
+{{/if}}
